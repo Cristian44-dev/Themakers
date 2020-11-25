@@ -74,17 +74,15 @@
 
 .portada__img {
   position: relative;
-  top: 10px;
   margin-right: 5px;
   width: 32px; }
 
 .portada__descripcion {
   align-self: center;
   width: 50%;
-  margin-right: 30px; }
+  margin-right: 40px; }
   .portada__descripcion p {
     padding-right: 40px;
-    font-weight: bold;
     text-align: center; }
 
 main {
@@ -130,7 +128,7 @@ main {
   .section-derecha__descripcion p {
     font-size: 14px;
     text-align: center;
-    margin: 40px; }
+    margin: 5px; }
 
 .section-derecha__titulo {
   align-self: center; }
@@ -168,7 +166,7 @@ main {
   padding-right: 40px; }
   .section-izquierda__descripcion p {
     text-align: center;
-    margin: 40px; }
+    margin: 5px; }
 
 .section-izquierda__titulo {
   align-self: center; }
@@ -250,7 +248,7 @@ footer {
 .titulo p {
   margin-top: 40px;
   text-align: center;
-  width: 50%;
+  width: 80%;
   align-self: center;
   color: white;
   margin-bottom: 100px; }
@@ -276,7 +274,10 @@ footer {
 .blogs-proyectos__img {
   border: 2px solid white;
   width: 100%;
-  max-width: 300px; }
+  min-width: 300px;
+  min-height: 225px;
+  max-width: 300px;
+  max-height: 225px; }
 
 .boton {
   margin-top: 10px;
@@ -312,14 +313,13 @@ footer {
 *********************************************/
 form {
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  form div {
-    align-self: center; }
+  flex-direction: column; }
 
-.contacto h1 {
-  text-align: center;
-  font-weight: 300; }
+.contacto {
+  text-align: center; }
+  .contacto h1 {
+    text-align: center;
+    font-weight: 300; }
 
 #nombre {
   padding: 10px;
@@ -380,7 +380,8 @@ textarea {
 
 .empleados__img {
   width: 100%;
-  max-width: 300px; }
+  max-width: 300px;
+  max-height: 300px; }
 
 .empleados__descripcion {
   width: 70%;
@@ -390,6 +391,9 @@ textarea {
   text-align: center; }
   .empleados__descripcion p {
     margin: 40px; }
+
+.caracteristicas {
+  display: inline-block; }
 
 /*********************************************
 *                                            *
@@ -420,7 +424,9 @@ textarea {
   border-bottom: 1px solid white; }
 
 iframe {
-  border: 3px solid black; }
+  border: 3px solid black;
+  width: 400px;
+  height: 300px; }
 
 .ubicacion__descripcion {
   margin: 40px; }
@@ -548,3 +554,147 @@ iframe {
 .empleados:hover {
   transform: translateX(20px);
   box-shadow: 10px 10px 10px black; }
+
+/*********************************************
+*                                            *
+*             MEDIA QUERIES                  *
+*                                            *
+*********************************************/
+/*********************************************
+                SECCTIONS Y IFRAME DIV
+*********************************************/
+@media screen and (max-width: 1150px) {
+  main {
+    padding: 50px 10px; }
+  .section-derecha, .section-izquierda {
+    padding: 10px;
+    margin: 40px auto;
+    flex-direction: column;
+    max-width: 500px; }
+  .section-derecha__contenedor, .section-izquierda__contenedor {
+    width: 100%; }
+  .section-derecha__descripcion, .section-izquierda__descripcion {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0; }
+  .iframe {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    flex-direction: column; }
+  .iframe__contenedor {
+    max-width: 500px;
+    width: 100%; }
+  .iframe__ubicacion {
+    width: 100%;
+    max-width: 500px; } }
+
+/*********************************************
+                     MENU
+*********************************************/
+@media screen and (max-width: 725px) {
+  .menu {
+    flex-direction: column; }
+  .menu__logotipo {
+    display: inline-block;
+    text-align: center; }
+  .portada {
+    display: block; }
+    .portada p {
+      display: none; }
+  .portada__contenido {
+    width: 100%; }
+  .menu__enlace {
+    padding: 0; } }
+
+@media screen and (max-width: 410px) {
+  .portada__lista {
+    margin-left: 20px; } }
+
+@media screen and (max-width: 630px) {
+  .menu__enlace {
+    margin-left: 15px; } }
+
+@media screen and (max-width: 500px) {
+  .menu__enlace {
+    margin-left: 5px; }
+  .menu {
+    padding: 0; } }
+
+@media screen and (max-width: 410px) {
+  .menu__enlace {
+    margin-left: 2px;
+    font-size: 14px; } }
+
+/*********************************************
+                IFRAME
+*********************************************/
+@media screen and (max-width: 730px) {
+  iframe {
+    width: 300px;
+    height: 200px; } }
+
+@media screen and (max-width: 440px) {
+  iframe {
+    width: 200px;
+    height: 200px; } }
+
+/*********************************************
+                FOOTER
+*********************************************/
+@media screen and (max-width: 515px) {
+  footer {
+    flex-direction: column; }
+  .redes, .proyectos {
+    width: 100%; }
+  .redes {
+    border: none;
+    border-bottom: 2px solid white; } }
+
+/*********************************************
+                EMPLEADOS
+*********************************************/
+@media screen and (max-width: 870px) {
+  .empleados {
+    max-width: 500px;
+    margin: 40px auto;
+    flex-direction: column; }
+  .empleados__contenedor {
+    text-align: center;
+    width: 100%; }
+  .empleados__descripcion {
+    padding-left: 0;
+    width: 100%; }
+    .empleados__descripcion p {
+      margin: 5px; } }
+
+/*********************************************
+                CONTACTO
+*********************************************/
+@media screen and (max-width: 440px) {
+  textarea {
+    max-width: 300px;
+    max-height: 90px;
+    min-width: 300px;
+    min-height: 90px; }
+  #nombre {
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    width: 300px;
+    background-color: transparent;
+    border: 1px solid white; }
+  #apellido {
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    width: 300px;
+    background-color: transparent;
+    border: 1px solid white; }
+  #comentario {
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    width: 300px;
+    background-color: transparent;
+    border: 1px solid white; } }
