@@ -32,7 +32,7 @@
   color: #f1c40f; }
 
 .menu__enlace {
-  padding: 30px 0px;
+  padding: 30px 0px 60px 0px;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -592,7 +592,7 @@ iframe {
 /*********************************************
                      MENU
 *********************************************/
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 821px) {
   .menu {
     flex-direction: column; }
   .menu__logotipo {
@@ -605,11 +605,20 @@ iframe {
   .portada__contenido {
     width: 100%; }
   .menu__enlace {
-    padding: 0; } }
+    padding: 0; }
+  nav {
+    text-align: center; } }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 530px) {
   .portada__lista {
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .menu__enlace {
+    margin-left: 2px;
+    font-size: 14px; } }
+
+@media screen and (max-width: 370px) {
+  .menu__enlace {
+    font-size: 12px; } }
 
 @media screen and (max-width: 630px) {
   .menu__enlace {
@@ -619,12 +628,9 @@ iframe {
   .menu__enlace {
     margin-left: 5px; }
   .menu {
-    padding: 0; } }
-
-@media screen and (max-width: 410px) {
-  .menu__enlace {
-    margin-left: 2px;
-    font-size: 14px; } }
+    padding: 0; }
+  .logo {
+    padding: 5px 0; } }
 
 /*********************************************
                 IFRAME
